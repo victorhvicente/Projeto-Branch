@@ -1,0 +1,257 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    color: rgb(70, 70, 129);
+}
+
+/* Aplicar flexbox ao corpo da página */
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+/* Estilizando o menu de navegação */
+
+header {
+    border-bottom: 1px solid  rgb(208, 208, 208);
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 50px;
+}
+
+nav .logo-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+nav .logo-name .logo {
+    width: 50px;
+    height: 50px;
+}
+
+.nav-list {
+    display: flex;
+}
+
+.nav-list ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-item {
+    margin-right: 25px;
+    display: block;
+    padding: 12px;
+}
+
+.nav-item:nth-child(4) {
+    background: rgb(70, 70, 129);
+    border-radius: 20px;
+  }
+
+.nav-link {
+    text-decoration: none;
+    font-size: 16px;
+}
+
+ul > li:nth-child(4) > .nav-link {
+    color: white;
+    font-size:14px;
+  }
+  
+  
+/* Ocultando os elementos de navegação móvel em telas maiores (dispositivos desktop e tablets) */
+
+.mobile-menu-icone {
+    display: none;
+}
+
+.mobile-itens {
+    display: none;
+}
+/* ----------------------- */
+
+/* Conteúdos Main */
+
+/* Definir altura mínima para o main */
+main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 250px); /* 100vh menos a altura do header */
+}
+
+.sessao-principal {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; 
+    align-items: center;
+    width: 100%;
+    margin-top: 50px;
+    padding: 50px;
+}
+
+.sessao-texto {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    text-align: left;
+    width: 40%;
+    gap: 15px;
+}
+
+.sessao-texto h1 {
+    margin: 8px 0;
+    font-size: 40px;
+}
+
+.sessao-texto p {
+    text-align: justify;
+}
+
+.botao {
+    display: flex;
+    width: 100%;
+    margin-top: 8px;
+}
+
+.botao button {
+    width: 100px;
+    height: 50px;
+    background: transparent;
+    border: 1px solid black;
+    border-radius: 50px;
+    cursor: pointer;
+}
+.imagem-burguer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 45%;
+    height: 300px;
+}
+
+.imagem-burguer .imagem {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    border: 1px solid white;
+    border-radius: 15px;
+}
+
+
+@media screen and (max-width: 775px){
+    /* Cabeçalho Mobile */
+
+    .nav-item {
+        display: none;
+    }
+
+    .mobile-menu-icone {
+        display: block;
+    }
+
+    .mobile-menu-icone .icone {
+        display: block;
+        width: 50px;
+        height: 50px;
+    }
+
+    .mobile-menu-icone button {
+        background: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .mobile-itens {
+        position: absolute;
+        top: 75px; 
+        background: white;
+        width: 100%;
+        left: 0;
+        right: 0;
+        border: 1px solid rgb(208, 208, 208);
+        box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .mobile-itens ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .mobile-itens .nav-item {
+        display: block;
+        width: 50%;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    .mobile-itens .nav-item a{
+        font-size: 12px;
+    }
+
+    .show {
+       display: flex;
+    }
+    /* --------------------------*/
+
+
+    main {
+        width: 100%;
+        display: flex;
+    }
+
+    .sessao-principal {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    .sessao-texto {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .sessao-texto h1 {
+        font-size: 30px;
+    }
+
+    .sessao-texto p {
+       text-align: justify;
+
+    }
+
+    .sessao-texto .botao {
+        width: 100%;
+    }
+
+    .sessao-texto button{
+        width: 100%;
+        height: 50px;
+        cursor: pointer;
+    }
+
+    .imagem-burguer {
+        width: 100%;
+        margin-top: 25px;
+    }
+
+}
+
