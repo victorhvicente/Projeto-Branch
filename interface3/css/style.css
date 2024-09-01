@@ -152,12 +152,13 @@ button:first-child {
 
 .conteudo-redes .redes {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
+    margin-left: 50px;
 }
 
 .conteudo-redes .redes a {
-    margin-right: 30px;
+    margin-right: 60px;
 }
 
 .conteudo-redes .redes img {
